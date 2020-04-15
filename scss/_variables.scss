@@ -1,0 +1,56 @@
+$primary: #486cb9;
+$secondary: rgb(155, 155, 155);
+$ltgrey: #aaa;
+$dkgrey: #666;
+
+$text: $secondary;
+
+$defaultFont: 'Source Sans Pro', sans-serif;
+
+$normal: 400;
+$bold: 700;
+
+$gutter: 2%;
+
+@mixin card {
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr 2fr 15px 2fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "photo photo photo photo"
+        "icon1 address icon2 phone";
+
+    padding-bottom: 15px;
+
+    figcaption {
+        display: block;
+        float: left;
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        font-size: 1.3rem;
+        font-weight: $bold;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    figure {
+            padding: .7rem 2vw;
+            position: relative;
+            text-align: center;
+        img {width: 85%;}
+        figcaption { text-align: center; padding: .2rem 0;}
+    }
+    .title {grid-area: title; color: white;}
+    .pic1 {grid-area: photo; img {border-radius: 15px;}}
+    .icon1 {grid-area: icon1; justify-self: end; color: white;}
+    .address {grid-area: address; color: white; padding-left: 5px;}
+    .icon2 {grid-area: icon2; justify-self: right; color: white;}
+    .phone {grid-area: phone; color: white; padding-left: 5px; padding-right: 10px;}
+}

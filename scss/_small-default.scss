@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+body {
+    font-size: 16px;
+    font-family: $defaultFont;
+    font-weight: $normal;
+    color: $text;
+    background-color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+}
+
+header {
+    background-color: $primary;
+    color: white;
+    padding: .5rem $gutter;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: $normal;
+    color: black;
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+
+nav {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    border-top: 1px solid $dkgrey;
+    display: flex;
+
+    div {
+        flex-basis: 33.33%;
+        text-align: center;
+        a {
+            display: block;
+            font-size: 2rem;
+            padding: .25rem 0 .25rem 0;
+            color: $ltgrey;
+        }
+    }
+
+    div.active {
+        background-color: $primary;
+        color: white;
+        padding-bottom: .28rem;
+    }
+}
+
+/*    MAIN ALBUM    */
+main {padding-bottom: 2.75rem;}
+
+main.locations {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: 
+        "title"
+        "one"
+        "two"
+        "three"
+        "four"
+}
+
+.loc1 {
+    grid-area: one;
+    @include card;
+}
+
+.loc2 {
+    grid-area: two;
+    @include card;
+}
+
+.loc3 {
+    grid-area: three;
+    @include card;
+}
+
+.loc4 {
+    grid-area: four;
+    @include card;
+    padding-bottom: 45px;
+}
+
+.fas, .fa {
+    font-size: 2rem;
+}

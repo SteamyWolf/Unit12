@@ -1,0 +1,14 @@
+main.locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto auto;
+    grid-template-areas: 
+        "title title"
+        "one two"
+        "three four"
+    
+}
+
+nav {
+    .btnTxt {display: none;}
+}
