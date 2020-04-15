@@ -1,0 +1,25 @@
+[   {
+    "name":"Lexington",
+    "photo":"images/kolkata.jpg",
+    "address":["1555 North Canyon Dr.","Lexington, VA 88765"],
+    "phone":"1-307-886-1234"
+    },
+    {
+    "name":"Las Vegas",
+    "photo":"images/lasvegas.jpg",
+    "address":["555 Main St.","Las Vegas NV, 84111"],
+    "phone":"1-307-886-1234"
+    },
+    {
+    "name":"St. Pete Beach",
+    "photo":"images/stpetebeach.jpg",
+    "address":["2019 Pennsylvania Ave","Washington, DC 20125"],
+    "phone":"1-303-389-2000"
+    },
+    {
+    "name":"Baltimore Downtown",
+    "photo":"images/meru.jpg",
+    "address":["1555 Downtown Ave.","Baltimore, VA 88765"],
+    "phone":"1-202-828-2500"
+    }
+]
